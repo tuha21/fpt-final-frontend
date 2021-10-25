@@ -1,0 +1,40 @@
+.catalog-header .add-group .btn-add {
+  margin-left: 10px;
+  background: #FFD333;
+  border-radius: 2px;
+  font-weight: 500;
+  outline: none;
+}
+
+.catalog-header .add-group .btn-back {
+  background: #D9DBDE;
+  border-radius: 2px;
+  font-weight: 500;
+  outline: none;
+}
+
+.catalog-table {
+  margin-top: 30px;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.catalog-detail-body {
+  margin-top: 30px;
+}
+
+.cbo-page-size {
+  border: 1px solid #E1E3E5;
+}
+
+.left-form,
+.date-information,
+.list-prod-by-cate {
+  padding: 20px;
+  border-radius: 2px;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+/*# sourceMappingURL=categorydetail.css.map */

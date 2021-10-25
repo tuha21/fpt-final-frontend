@@ -1,0 +1,13 @@
+@media screen and (max-width: 992px) {
+  .content {
+    display: none;
+  }
+}
+
+.content {
+  margin-left: 240px;
+  min-height: 100%;
+  padding: 80px 30px 30px 30px;
+  background-color: #F5F7FA;
+}
+/*# sourceMappingURL=dashboard.css.map */
