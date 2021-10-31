@@ -2,7 +2,8 @@ import { SET_PAGINATE } from "../../constant/const"
 
 const paginate = {
     page: 0,
-    size: 5
+    size: 5,
+    prev: 0
 }
 
 var myReducer = (state = paginate, action) => {

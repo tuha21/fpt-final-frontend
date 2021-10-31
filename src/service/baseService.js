@@ -67,6 +67,20 @@ class BaseService {
         return fetch(BASE_URL + this.catalogUrl, requestOptions)
     }
 
+    delete = (id) => {
+        var token = localStorage.getItem("token")
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Bearer " + token);
+
+        var requestOptions = {
+            method: 'DELETE',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+
+        return fetch(BASE_URL + this.catalogUrl + "/" + id, requestOptions)
+    }
+
 }
 
 export default BaseService;

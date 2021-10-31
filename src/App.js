@@ -1,28 +1,35 @@
-import React, { Component } from 'react'
-import Page from './component/Page'
-import { IsLoginProvider } from './context/IsLogin';
-
-export default class App extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            isLogin: false
-        }
-    }
-
-
-    onChangeIsLogin = (isLogin) => {
-        this.setState({
-            isLogin
-        })
-    }
+import React, { Component } from 'react';
+import Home from "./components/home/Home";
+import { connect } from "react-redux"
+import AdminPage from "./components/adminPage/AdminPage"
+import {
+    BrowserRouter as Router,
+    Route
+} from "react-router-dom"
+class App extends Component {
     render() {
-        var {isLogin} = this.state
+
+        var { isLogin } = this.props
+
         return (
-            <IsLoginProvider value={{ isLogin, toggleIsLogin: this.onChangeIsLogin }}>
-                <Page />
-            </IsLoginProvider>
-        )
+            <div>
+                <Router>
+                    {isLogin ? <AdminPage /> : <Home />}
+                </Router>
+            </div>
+        );
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        isLogin: state.isLogin
+    }
+}
+
+const mapStateToDispatch = dispatch => {
+    return {
+
+    }
+}
+export default connect(mapStateToProps, mapStateToDispatch)(App);
